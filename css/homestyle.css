@@ -1,0 +1,174 @@
+:root {
+    --deep-blue: #12344d;
+    --teal: #45b29d;
+    --yellow: #efc94c;
+}
+
+/* General styles */
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header */
+.main_header {
+    background-color: var(--deep-blue);
+    padding: 15px 0;
+}
+
+.nav_bar .nav_list {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.nav_list li {
+    margin: 0 20px;
+}
+
+.nav_list a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav_list a:hover {
+    color: #EFC94C;
+}
+
+/* Hero Section */
+.hero_section {
+    background-image: url('/images/banner-bg.png');
+    background-size: cover;
+    color: white;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.hero_content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero_content p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.hero_cta {
+    background-color: #45B29D;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.hero_cta:hover {
+    background-color: #EFC94C;
+}
+
+/* Services Section */
+.services_section {
+    padding: 50px 0;
+    background-color: #f9f9f9;
+}
+
+.section_title {
+    text-align: center;
+    font-size: 36px;
+    color: #334D5C;
+    margin-bottom: 40px;
+}
+
+.service_box {
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+}
+
+.service_box:hover {
+    transform: translateY(-10px);
+}
+
+.service_icon img {
+    width: 60px;
+    margin-bottom: 20px;
+}
+
+.service_title {
+    font-size: 24px;
+    color: #334D5C;
+    margin-bottom: 15px;
+}
+
+.service_description {
+    font-size: 16px;
+    color: #666;
+}
+
+.read_more {
+    display: inline-block;
+    background-color: #45B29D;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 30px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.read_more:hover {
+    background-color: #EFC94C;
+}
+
+/* Scroll Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero_section, .services_section {
+    opacity: 0;
+    animation: fadeInUp 0.6s ease forwards;
+    animation-delay: 0.2s;
+}
+
+.services_section .service_box {
+    opacity: 0;
+    animation: fadeInUp 0.8s ease forwards;
+    animation-delay: 0.4s;
+}
+
+.section_title {
+    opacity: 0;
+    animation: fadeInUp 0.6s ease forwards;
+    animation-delay: 0.3s;
+}
+
+/* Animations when scrolling */
+.hero_section {
+    animation-delay: 0.1s;
+}
+
+.services_section .service_box:nth-child(2) {
+    animation-delay: 0.6s;
+}
+
+.services_section .service_box:nth-child(3) {
+    animation-delay: 0.8s;
+}
+

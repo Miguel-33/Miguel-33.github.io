@@ -1,0 +1,205 @@
+/* Training Title */
+.training-title {
+    width: 100%;
+    float: left;
+    font-size: 36px;
+    color: #001431;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+/* Intro Paragraph */
+.training-intro {
+    width: 100%;
+    float: left;
+    color: #001431;
+    font-size: 18px;
+    line-height: 1.5;
+    padding: 20px 0;
+}
+
+/* Class Details */
+.class-details-title {
+    font-size: 28px;
+    color: #001431;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.class-details-list {
+    width: 100%;
+    float: left;
+    padding-left: 20px;
+    font-size: 16px;
+    color: #333;
+}
+
+.class-dates-list {
+    padding-left: 20px;
+    font-size: 16px;
+    color: #666;
+}
+
+/* Class Description */
+.class-description-title {
+    font-size: 28px;
+    color: #001431;
+    font-weight: bold;
+    margin-top: 40px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.class-description {
+    width: 100%;
+    float: left;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #333;
+}
+
+/* Training Content */
+.training-content-title {
+    font-size: 28px;
+    color: #001431;
+    font-weight: bold;
+    margin-top: 40px;
+    text-transform: uppercase;
+}
+
+.training-content-list {
+    width: 100%;
+    float: left;
+    padding-left: 20px;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Sign-Up Form */
+.signup-title {
+    font-size: 28px;
+    color: #001431;
+    font-weight: bold;
+    margin-top: 40px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.signup-instructions {
+    width: 100%;
+    float: left;
+    font-size: 18px;
+    color: #333;
+    padding: 10px 0;
+}
+
+.signup-form {
+    width: 100%;
+    float: left;
+    margin-top: 20px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.form-label {
+    font-size: 16px;
+    color: #001431;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.submit-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #001431;
+    color: #ffffff;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #FFCE04;
+    color: #001431;
+}
+
+/* Payment Information */
+.payment-info-title {
+    font-size: 28px;
+    color: #001431;
+    font-weight: bold;
+    margin-top: 40px;
+    text-transform: uppercase;
+}
+
+.payment-info {
+    width: 100%;
+    float: left;
+    font-size: 18px;
+    color: #333;
+}
+
+/* Hover Effects */
+.read_bt {
+    width: 170px;
+    margin: 30px auto;
+    text-align: center;
+}
+
+.read_bt a {
+    width: 100%;
+    font-size: 16px;
+    color: #ffffff;
+    padding: 10px;
+    background-color: #001431;
+    text-align: center;
+    border-radius: 5px;
+    text-transform: uppercase;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.read_bt a:hover {
+    background-color: #FFCE04;
+    color: #001431;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    .training-title {
+        font-size: 28px;
+    }
+
+    .training-intro,
+    .class-description,
+    .signup-instructions,
+    .payment-info {
+        font-size: 16px;
+    }
+
+    .signup-form {
+        padding: 15px;
+    }
+}

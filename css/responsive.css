@@ -179,6 +179,17 @@
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+    .header_section nav {
+        background-color: #fff !important;
+    }
+    .header_section nav .dropdown-menu {
+        position: static;
+        width: 100%;
+        box-shadow: none;
+    }
+    .header_section nav .dropdown-item {
+        padding: 12px 20px;
+    }
     a.navbar-brand {
         width: 40%;
     }
@@ -187,12 +198,17 @@
         border: 1px solid #fff;
     }
     .navbar-expand-lg .navbar-nav .nav-link {
-        width: 130px;
         margin: 0 auto;
         text-align: center;
     }
     .banner_section {
         padding-top: 30px;
+    }
+    #banner_slider a.carousel-control-prev {
+        display: none;
+    }
+    #banner_slider a.carousel-control-next {
+        display: none;
     }
     .box_section {
         width: 100%;
@@ -268,6 +284,21 @@
 }
 
 @media (min-width: 576px) and (max-width: 767px) {
+    body{
+        background-size: 210vh;
+    }
+    .header_section nav {
+        background-color: #fff !important;
+        gap: inherit;
+    }
+    .header_section nav .dropdown-menu {
+        position: static;
+        width: 100%;
+        box-shadow: none;
+    }
+    .header_section nav .dropdown-item {
+        padding: 12px 20px;
+    }
     #banner_slider a.carousel-control-prev {
         display: none;
     }
@@ -287,7 +318,6 @@
         display: none;
     }
     .navbar-expand-lg .navbar-nav .nav-link {
-        width: 130px;
         margin: 0 auto;
         text-align: center;
     }
@@ -306,7 +336,7 @@
         padding: 15px 0px;
     }
     .banner_section {
-        padding: 30px 0px 100px 0px;
+        padding: 20px;
     }
     .banner_taital_main {
         padding-left: 0px;
@@ -320,6 +350,12 @@
     }
     .started_bt {
         width: 137px;
+    }
+    #banner_slider a.carousel-control-prev {
+        display: none;
+    }
+    #banner_slider a.carousel-control-next {
+        display: none;
     }
     .banner_img {
         width: 100%;
@@ -384,6 +420,9 @@
 }
 
 @media (max-width: 575px) {
+    body {
+        background-size: 100dvh;
+    }
     #banner_slider a.carousel-control-prev {
         display: none;
     }
@@ -406,9 +445,9 @@
         padding: 0;
         text-align: right;
     }
-    .navbar-expand-lg .navbar-nav .nav-link {
+    /*.navbar-expand-lg .navbar-nav .nav-link {
         width: 130px;
-    }
+    }*/
     .online_box {
         width: 100%;
         display: block;
@@ -431,9 +470,7 @@
         gap:1em;
     }
     .banner_section {
-        padding: 30px 0px 100px 0px;
-        min-height: 100vh;
-        height: 100vh;
+        padding: 20px;
     }
     .banner_taital_main {
         padding-left: 0px;

@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const day2Container = document.getElementById('day-2');
 
     try {
-        const response = await fetch('backend/classDates.js'); // Use your backend URL here
+        const response = await fetch('http://localhost:3000/getClassDates'); // Use your backend URL here
         const data = await response.json();
         
         // Assuming the dates are in the values property of the response data

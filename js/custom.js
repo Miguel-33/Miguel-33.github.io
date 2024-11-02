@@ -9,9 +9,10 @@ $(function () {
 	/* Preloader
 	-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- */
 	
-	setTimeout(function () {
-		$('.loader_bg').fadeToggle();
-	}, 1500);
+	window.addEventListener("load", function () {
+		document.getElementById("preloader").style.display = "none";
+	 });
+	 
 	
 	/* JQuery Menu
 	-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- */
@@ -78,74 +79,6 @@ $(function () {
           scrollTop: 0
         }, 1000);
     });
-
-
-	
-	/* Contact-form
-	-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- */
-  if (document.querySelector("#showMap")) { 
-	  	document.querySelector("#showMap").addEventListener("click", function (e) { 
-	  		e.preventDefault(); 
-	  		$(".map_form_container").addClass("map_show"); 
-	  		document.querySelector(".contact_heading").innerText = "Location"; 
-	  	}); 
-  	}
-	if (document.querySelector("#showForm")) { 
-		document.querySelector("#showForm").addEventListener("click", function (e) { 
-			e.preventDefault(); $(".map_form_container").removeClass("map_show"); 
-			document.querySelector(".contact_heading").innerText = "Request A Call Back"; 
-		}); 
-	}
-
-
-	$.validator.setDefaults( {
-		submitHandler: function () {
-			alert( "submitted!" );
-		}
-	} );
-	
-	$( document ).ready( function () {
-		$( "#contact-form" ).validate( {
-			rules: {
-				firstname: "required",
-				email: {
-					required: true,
-					email: true
-				},
-				lastname: "required",
-				message: "required",
-				agree: "required"
-			},
-			messages: {
-				firstname: "Please enter your firstname",
-				email: "Please enter a valid email address",
-				lastname: "Please enter your lastname",
-				username: {
-					required: "Please enter a username",
-					minlength: "Your username must consist of at least 2 characters"
-				},
-				message: "Please enter your Message",
-				agree: "Please accept our policy"
-			},
-			errorElement: "div",
-			errorPlacement: function ( error, element ) {
-				// Add the `help-block` class to the error element
-				error.addClass( "help-block" );
-
-				if ( element.prop( "type" ) === "checkbox" ) {
-					error.insertAfter( element.parent( "input" ) );
-				} else {
-					error.insertAfter( element );
-				}
-			},
-			highlight: function ( element, errorClass, validClass ) {
-				$( element ).parents( ".col-md-4, .col-md-12" ).addClass( "has-error" ).removeClass( "has-success" );
-			},
-			unhighlight: function (element, errorClass, validClass) {
-				$( element ).parents( ".col-md-4, .col-md-12" ).addClass( "has-success" ).removeClass( "has-error" );
-			}
-		} );
-	});
 	
 	/* heroslider
 	-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- */
@@ -256,39 +189,6 @@ $(function () {
         }]
     });
 	
-	/* News Slider
-	-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- */
-	
-	$('#news-slider').slick({
-        dots: false,
-        infinite: false,
-		prevArrow: '.previous',
-		nextArrow: '.next',
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        responsive: [{
-            breakpoint: 1024,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                infinite: true,
-                dots: false
-            }
-        }, {
-            breakpoint: 600,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1
-            }
-        }, {
-            breakpoint: 480,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1
-            }
-        }]
-    });
 	
 	/* Fancybox
 	-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- */
@@ -320,18 +220,30 @@ $(function () {
 
 });
 
-// Detect when each scroll-reveal element is visible on scroll
-window.addEventListener('scroll', function() {
-    const revealElements = document.querySelectorAll('.scroll-reveal');
-    const screenPosition = window.innerHeight / 1.2;
+window.addEventListener('DOMContentLoaded', function() {
+    window.addEventListener('scroll', function() {
+        const revealElements = document.querySelectorAll('.scroll-reveal');
+        const screenPosition = window.innerHeight / 1.2;
 
-    revealElements.forEach(function (element) {
-        const elementPosition = element.getBoundingClientRect().top;
+        revealElements.forEach(function(element) {
+            const elementPosition = element.getBoundingClientRect().top;
 
-        // Check if the element is visible in the viewport
-        if (elementPosition < screenPosition) {
-            element.classList.add('show');
-        }
+            // Check if the element is visible in the viewport
+            if (elementPosition < screenPosition) {
+                element.classList.add('show');
+            }
+        });
+    });
+});
+
+
+   // Enable main links in dropdown to work as usual
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.nav-item.dropdown > a').forEach(dropdownLink => {
+        dropdownLink.addEventListener('click', (event) => {
+            // Allow link click to navigate to the href instead of just toggling dropdown
+            window.location.href = dropdownLink.getAttribute('href');
+        });
     });
 });
 

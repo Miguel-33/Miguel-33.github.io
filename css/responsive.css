@@ -181,6 +181,7 @@
 @media (min-width: 768px) and (max-width: 991px) {
     .header_section nav {
         background-color: #fff !important;
+        gap: inherit;
     }
     .header_section nav .dropdown-menu {
         position: static;
@@ -262,6 +263,12 @@
     }
     .box_main {
         padding: 0;
+    }
+    .practice_areas_section .row {
+        display: block;
+    }
+    .col-md-4 {
+        max-width: 100% !important;
     }
     .enim_text {
         font-size: 14px;

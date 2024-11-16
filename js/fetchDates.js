@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const weekend2Container = document.getElementById('weekend-2');
 
     try {
-        const response = await fetch('/getClassDates'); // Use your backend URL here
+        const response = await fetch('miguel-33-github-io.vercel.app/getClassDates');
         const data = await response.json();
         
         // Assuming the dates are in the values property of the response data

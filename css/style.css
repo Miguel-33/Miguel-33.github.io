@@ -741,6 +741,7 @@ p.chunks_text {
 }
 
 .training_section {
+    background-color: #f9f8f5;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1093,7 +1094,7 @@ figure:hover+span {
 
 .about_section {
     width: 100%;
-    background: linear-gradient(#023e8a 60%, #3498db 90%);
+    background: linear-gradient(#0077b6 60%, #3498db 90%);
     padding: 40px 0; /* Adjusted padding for consistent spacing */
     min-height: 600px; /* Ensures it has a minimum height but can expand */
     display: flex;
@@ -1510,7 +1511,7 @@ textarea#comment::placeholder {
 .footer_section {
     width: 100%;
     float: left;
-    background-color: #030453;
+    background-color: #3498db;
     height: auto;
     padding: 30px 0;
 }
@@ -1552,7 +1553,7 @@ textarea#comment::placeholder {
 }
 
 .social_icon li a:hover {
-    color: #3498db;
+    color: #030453;
 }
 
 .location_text {
@@ -1577,7 +1578,7 @@ textarea#comment::placeholder {
     font-size: 20px;
     color: #030453;
     margin: 0px 30px;
-    background-color: #3498db;
+    background-color: #fff;
     padding: 12px 0px;
     border-radius: 100%;
     width: 60px;
@@ -1585,14 +1586,14 @@ textarea#comment::placeholder {
 }
 
 .location_text li a:hover {
-    color: #252525;
-    background-color: #ffffff;
+    color: #fff;
+    background-color: #030453;
 }
 
 .copyright_section {
     width: 100%;
     float: left;
-    background-color: #030453;
+    background-color: #3498db;
     height: auto;
 }
 

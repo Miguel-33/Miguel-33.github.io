@@ -1,8 +1,7 @@
 {
-  "version": 2,
-  "functions": {
-    "api/getClassDates.js": {
-      "runtime": "nodejs18.x"
-    }
+    "version": 2,
+    "routes": [
+      { "src": "/api/(.*)", "dest": "/api/$1" }
+    ]
   }
-}
+  

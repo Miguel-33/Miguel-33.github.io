@@ -9,6 +9,7 @@ module.exports = async (req, res) => {
         const response = await axios.get(`https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/${RANGE}?key=${API_KEY}`);
         res.status(200).json(response.data);
     } catch (error) {
+        console.error('Error:', error);
         res.status(500).json({ error: 'Failed to fetch class dates' });
     }
 };

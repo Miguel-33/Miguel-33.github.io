@@ -1,17 +1,13 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "submit_form.php",
-      "use": "@vercel/php"
-    },
-    {
-      "src": "api/getClassDates.js",
-      "use": "@vercel/node"
-    }
-  ],
-  "routes": [
-    { "src": "/submit_form.php", "dest": "submit_form.php" },
-    { "src": "/api/getClassDates", "dest": "api/getClassDates.js" }
-  ]
-}
+    "version": 2,
+    "builds": [
+      {
+        "src": "api/getClassDates.js",
+        "use": "@vercel/node"
+      }
+    ],
+    "routes": [
+      { "src": "/api/getClassDates", "dest": "api/getClassDates.js" }
+    ]
+  }
+  

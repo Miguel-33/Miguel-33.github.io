@@ -1,0 +1,8 @@
+{
+  "name": "tusca-alexis-website",
+  "version": "1.0.0",
+  "main": "getClassDates.js",
+  "dependencies": {
+    "axios": "^1.0.0"
+  }
+}

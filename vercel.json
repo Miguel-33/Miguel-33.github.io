@@ -2,12 +2,12 @@
     "version": 2,
     "builds": [
       {
-        "src": "api/getClassDates.js",
+        "src": "/api/getClassDates.js",
         "use": "@vercel/node"
       }
     ],
     "routes": [
-      { "src": "/api/getClassDates", "dest": "api/getClassDates.js" }
+      { "src": "/api/getClassDates", "dest": "/api/getClassDates.js" }
     ]
   }
   

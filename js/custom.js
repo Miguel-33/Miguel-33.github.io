@@ -4,11 +4,6 @@
 
 $(function () {
     "use strict";
-    
-    // Hide preloader on window load
-    window.addEventListener("load", function () {
-        document.getElementById("preloader").style.display = "none";
-    });
 
     // Initialize MeanMenu for mobile navigation
     $(document).ready(function () {

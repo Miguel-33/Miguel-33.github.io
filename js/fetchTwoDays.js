@@ -1,40 +1,44 @@
 document.addEventListener('DOMContentLoaded', async () => {
-    const day1Container = document.getElementById('day-1');
-    const day2Container = document.getElementById('day-2');
+    const weekend1Container = document.getElementById('weekend-1');
+    const weekend2Container = document.getElementById('weekend-2');
 
     try {
-        const response = await fetch('http://localhost:3000/getClassDates'); // Use your backend URL here
+        const response = await fetch('https://miguel-33-github-io.vercel.app/api/getClassDates');
         const data = await response.json();
-        
+
         // Assuming the dates are in the values property of the response data
         const dates = data.values;
 
-        // Check if we have enough dates (at least 2)
-        if (dates && dates.length >= 2) {
-            const dateListDay1 = document.createElement('ul');
-            const dateListDay2 = document.createElement('ul');
-            
-            // Get the first date for Day 1
-            const listItemDay1 = document.createElement('li');
-            listItemDay1.textContent = `${dates[0][0]}, Time: ${dates[0][1]} - ${dates[0][2]}`;
-            dateListDay1.appendChild(listItemDay1);
+        // Check if we have enough dates (at least 6)
+        if (dates && dates.length >= 6) {
+            const dateListWeekend1 = document.createElement('ul');
+            const dateListWeekend2 = document.createElement('ul');
 
-            // Get the second date for Day 2
-            const listItemDay2 = document.createElement('li');
-            listItemDay2.textContent = `${dates[1][0]}, Time: ${dates[1][1]} - ${dates[1][2]}`;
-            dateListDay2.appendChild(listItemDay2);
+            // Get first 3 dates for 1st weekend
+            for (let i = 0; i < 3; i++) {
+                const listItem = document.createElement('li');
+                listItem.textContent = `${dates[i][0]}, Time: ${dates[i][1]} - ${dates[i][2]}`;
+                dateListWeekend1.appendChild(listItem);
+            }
+
+            // Get next 3 dates for 2nd weekend
+            for (let i = 3; i < 6; i++) {
+                const listItem = document.createElement('li');
+                listItem.textContent = `${dates[i][0]}, Time: ${dates[i][1]} - ${dates[i][2]}`;
+                dateListWeekend2.appendChild(listItem);
+            }
 
             // Append the lists to their respective containers
-            day1Container.appendChild(dateListDay1);
-            day2Container.appendChild(dateListDay2);
+            weekend1Container.appendChild(dateListWeekend1);
+            weekend2Container.appendChild(dateListWeekend2);
         } else {
             // If we don't have enough dates, show a message
-            day1Container.textContent = 'Not enough dates available for Day 1';
-            day2Container.textContent = 'Not enough dates available for Day 2';
+            weekend1Container.textContent = 'Not enough dates available for 1st weekend';
+            weekend2Container.textContent = 'Not enough dates available for 2nd weekend';
         }
     } catch (error) {
-        day1Container.textContent = 'Error fetching class dates';
-        day2Container.textContent = 'Error fetching class dates';
+        weekend1Container.textContent = 'Error fetching class dates';
+        weekend2Container.textContent = 'Error fetching class dates';
         console.error('Error:', error);
     }
 });

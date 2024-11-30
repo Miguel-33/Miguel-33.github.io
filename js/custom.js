@@ -4,6 +4,11 @@
 
 $(function () {
     "use strict";
+    
+    // Hide preloader on window load
+    window.addEventListener("load", function () {
+        document.getElementById("preloader").style.display = "none";
+    });
 
     // Initialize MeanMenu for mobile navigation
     $(document).ready(function () {
@@ -186,5 +191,17 @@ document.addEventListener("DOMContentLoaded", function () {
         link.addEventListener('click', () => {
             navbar.classList.remove('show');
         });
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const navbar = document.querySelector(".header_section nav");
+
+    window.addEventListener("scroll", function () {
+        if (window.scrollY > 50) { // Adjust the scroll threshold as needed
+            navbar.classList.add("scrolled");
+        } else {
+            navbar.classList.remove("scrolled");
+        }
     });
 });

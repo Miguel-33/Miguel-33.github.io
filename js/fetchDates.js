@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     try {
         const response = await fetch('https://miguel-33-github-io.vercel.app/api/getClassDates');
         const data = await response.json();
-
+        
         // Assuming the dates are in the values property of the response data
         const dates = data.values;
 
@@ -13,18 +13,18 @@ document.addEventListener('DOMContentLoaded', async () => {
         if (dates && dates.length >= 6) {
             const dateListWeekend1 = document.createElement('ul');
             const dateListWeekend2 = document.createElement('ul');
-
+            
             // Get first 3 dates for 1st weekend
             for (let i = 0; i < 3; i++) {
                 const listItem = document.createElement('li');
-                listItem.textContent = `${dates[i][0]}, Time: ${dates[i][1]} - ${dates[i][2]}`;
+                listItem.textContent = ${dates[i][0]}, Time: ${dates[i][1]} - ${dates[i][2]};
                 dateListWeekend1.appendChild(listItem);
             }
 
             // Get next 3 dates for 2nd weekend
             for (let i = 3; i < 6; i++) {
                 const listItem = document.createElement('li');
-                listItem.textContent = `${dates[i][0]}, Time: ${dates[i][1]} - ${dates[i][2]}`;
+                listItem.textContent = ${dates[i][0]}, Time: ${dates[i][1]} - ${dates[i][2]};
                 dateListWeekend2.appendChild(listItem);
             }
 

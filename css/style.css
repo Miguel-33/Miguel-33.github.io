@@ -11,7 +11,9 @@
 @import url(nice-select.css);
 @import url('https://fonts.googleapis.com/css2?family=Baskervville+SC&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
     box-sizing: border-box !important;
     transition: ease all 0.3s;
 }
@@ -38,7 +40,8 @@ body {
     display: flex;
 }
 
-.parallax-section h1, .parallax-section h3 {
+.parallax-section h1,
+.parallax-section h3 {
     font-family: 'Baskervville SC', 'Poppins', sans-serif;
     margin: auto;
 }
@@ -224,7 +227,7 @@ button {
 
 .header_section {
     padding-top: 150px;
-    width: 100%;    
+    width: 100%;
 }
 
 .header_section .container-fluid {
@@ -237,7 +240,28 @@ button {
     width: 100%;
     z-index: 1000;
     background-color: rgba(255, 255, 255, .85) !important;
-    box-shadow: 0 2px 4px 8px rgba(0, 0, 0, 0.1);  
+    box-shadow: 0 2px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#language_switcher {
+    margin: 0 0 5px;
+}
+
+#language_switcher a{
+    text-decoration: none;
+    font-size: 12pt;
+    font-weight: bold;
+    color: #3498db;
+    padding: 10px 15px;
+    border: 2px solid #3498db;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+#language_switcher a:hover {
+    background-color: #3498db;
+    color: #fff !important;
+    border-color: #3498db;
 }
 
 .header_bg {
@@ -262,7 +286,7 @@ button {
 a.navbar-brand h1 {
     margin-top: 10px;
     color: #030453;
-    font-size: 32pt;
+    font-size: 28pt;
     text-align: center;
     border-bottom: 1px solid #030453;
     line-height: .4;
@@ -270,14 +294,14 @@ a.navbar-brand h1 {
 
 a.navbar-brand h3 {
     color: #030453;
-    font-size: 18pt;
+    font-size: 16pt;
     text-align: center;
 }
 
 /* Navbar styles when scrolled */
 .header_section nav.scrolled {
     padding: 0 15px;
-    background-color: rgba(255, 255, 255, .95) !important;
+    background-color: rgba(255, 255, 255, 1) !important;
     box-shadow: 0 2px 6px 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -346,6 +370,7 @@ a.navbar-brand h3 {
     background-color: #3498db;
     color: #fff;
 }
+
 /* header section end */
 
 /* banner section start */
@@ -362,7 +387,8 @@ a.navbar-brand h3 {
     min-height: 60vh;
     opacity: 0;
     animation: fadeIn 0.5s ease-in-out forwards;
-    text-align: center; /* Center align all text */
+    text-align: center;
+    /* Center align all text */
 }
 
 .banner_taital_main {
@@ -393,13 +419,15 @@ a.navbar-brand h3 {
     justify-content: center;
 }
 
-.started_bt, .readmore_btn {
+.started_bt,
+.readmore_btn {
     display: inline-block;
     text-align: center;
     border-radius: 5px;
 }
 
-.started_bt a, .readmore_btn a {
+.started_bt a,
+.readmore_btn a {
     padding: 12px 20px;
     font-family: "Poppins", sans-serif;
     font-weight: 500;
@@ -411,7 +439,8 @@ a.navbar-brand h3 {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.started_bt a:hover, .readmore_btn a:hover {
+.started_bt a:hover,
+.readmore_btn a:hover {
     color: #030453;
     background-color: #ffffff;
 }
@@ -432,7 +461,7 @@ a.navbar-brand h3 {
     width: 70%;
     margin: 0 auto;
     text-align: center;
-    animation: slideUp 1s ease-in-out ;
+    animation: slideUp 1s ease-in-out;
 }
 
 .banner_img img {
@@ -545,7 +574,8 @@ a.navbar-brand h3 {
     color: #0077b6 !important;
 }
 
-.online_box_left:hover, .online_box_left.active:hover {
+.online_box_left:hover,
+.online_box_left.active:hover {
     background-color: #023e8a;
     box-shadow: 0 2px 0 2px #023e8a;
 }
@@ -579,6 +609,7 @@ a.navbar-brand h3 {
 .row {
     margin-left: 0;
 }
+
 .services_section {
     width: 100%;
     max-height: 120vh;
@@ -1464,13 +1495,12 @@ textarea#comment::placeholder {
     float: left;
     background-color: #3498db;
     height: auto;
-    padding: 30px 0;
+    padding: 30px 0 0;
 }
 
 .footer_logo {
     width: 100%;
     text-align: center;
-    margin: 20px 0px 0px 0px;
 }
 
 .footer_logo a h1,
@@ -1554,7 +1584,6 @@ textarea#comment::placeholder {
     font-size: 16px;
     color: #ffffff;
     text-align: center;
-    margin-left: 0px;
 }
 
 .copyright_text a {
@@ -1576,6 +1605,7 @@ textarea#comment::placeholder {
         opacity: 0;
         transform: translateY(50px);
     }
+
     100% {
         opacity: 1;
         transform: translateY(0);
@@ -1600,6 +1630,7 @@ textarea#comment::placeholder {
     0% {
         opacity: 0;
     }
+
     100% {
         opacity: 1;
     }
@@ -1610,6 +1641,7 @@ textarea#comment::placeholder {
         opacity: 0;
         transform: translateY(30px);
     }
+
     100% {
         opacity: 1;
         transform: translateY(0);
@@ -1621,6 +1653,7 @@ textarea#comment::placeholder {
         opacity: 0;
         transform: translateY(100px);
     }
+
     100% {
         opacity: 1;
         transform: translateY(0);
